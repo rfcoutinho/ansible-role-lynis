@@ -1,0 +1,5 @@
+Vagrantfile
+.aws
+.vagrant
+tests/*
+!tests/test.yml

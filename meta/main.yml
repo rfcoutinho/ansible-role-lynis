@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Rafael Coutinho
+  description: Install Lynis Audit Security Scan
+  company:
+  license: GPL-3.0-only
+
+  min_ansible_version: 2.9
+
+  platforms:
+    name: Centos
+      versions:
+        - 7
+
+  galaxy_tags:
+    - lynis
+    - security
+    - scan
+
+dependencies: []

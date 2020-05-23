@@ -1,0 +1,26 @@
+---
+# Reference: https://packages.cisofy.com/community/
+- name: Ensure CISOfy dependencies are present
+  yum:
+    name:
+    - ca-certificates
+    - curl
+    - nss
+    - openssl
+    state: present
+
+- name: Add CISOfy Softare Repository
+  yum_repository:
+    name: lynis
+    description:  CISOfy Software - Lynis package
+    file: /etc/yum.repos.d/cisofy-lynis.repo
+    baseurl: https://packages.cisofy.com/community/lynis/rpm/
+    enabled: yes
+    gpgkey: https://packages.cisofy.com/keys/cisofy-software-rpms-public.key
+    gpgcheck: yes
+    priority: 2
+
+- name: Install Lynis
+  yum:
+    name: lynis
+    state: present

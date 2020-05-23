@@ -1,1 +1,13 @@
 ---
+- name: Start Lynis Install on Debian/Ubuntu
+  include_tasks: setup-ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
+
+- name: Start Lynis Install on CentOS
+  include_tasks: setup-centos.yml
+  when: ansible_distribution == 'CentOS'
+
+- name: Failed to Install
+  fail:
+    msg: "{{ ansible_distribution }} is not supported yet for this role"
+  when: ansible_distribution not in ['Ubuntu','CentOS']

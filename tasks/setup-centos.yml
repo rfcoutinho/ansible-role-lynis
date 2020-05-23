@@ -3,16 +3,16 @@
 - name: Ensure CISOfy dependencies are present
   yum:
     name:
-    - ca-certificates
-    - curl
-    - nss
-    - openssl
+      - ca-certificates
+      - curl
+      - nss
+      - openssl
     state: present
 
 - name: Add CISOfy Softare Repository
   yum_repository:
     name: lynis
-    description:  CISOfy Software - Lynis package
+    description: CISOfy Software - Lynis package
     file: /etc/yum.repos.d/cisofy-lynis.repo
     baseurl: https://packages.cisofy.com/community/lynis/rpm/
     enabled: yes

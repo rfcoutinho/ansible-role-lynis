@@ -3,5 +3,6 @@ Vagrantfile
 .vagrant
 tests/*
 !tests/test.yml
-*.yml
 roles
+/*.yml
+.retry

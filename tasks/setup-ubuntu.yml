@@ -1,6 +1,6 @@
 ---
 # Reference: https://packages.cisofy.com/community/
-- name: Ensure apt-transport-https is present
+- name: Ensure dependencies are present
   yum:
     name:
       - apt-transport-https

@@ -1,6 +1,5 @@
 ---
-- hosts: localhost
-  gather_facts: true
+- hosts: "{{ target_host }}"
   become_method: sudo
   roles:
     - ansible-role-lynis
